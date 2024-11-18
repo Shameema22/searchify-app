@@ -1,70 +1,186 @@
-# Getting Started with Create React App
+# Searchify App (Frontend) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend application for the Searchify project. The app allows users to search for items, view search results, and interact with them through an intuitive and responsive interface.
 
-## Available Scripts
+## Features 
 
-In the project directory, you can run:
+Search bar with dynamic input for user queries. 
 
-### `npm start`
+Displays search results as a responsive grid. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each result includes an image, title, and description. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+User-friendly interface with clean design. 
 
-### `npm test`
+Error handling for failed API calls. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fully responsive for mobile, tablet, and desktop. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Technologies Used 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ReactJS: Frontend framework. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Context API: State management. 
 
-### `npm run eject`
+CSS: Styling and layout. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React Router: Navigation. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Axios: API calls. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Flexbox & Grid: Responsive layout design. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Folder Structure 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+searchify-app/ 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+├── public/ 
 
-### Code Splitting
+│ └── index.html # Main HTML file 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+├── src/ │
 
-### Analyzing the Bundle Size
+├── components/ # Reusable components 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+│ │ ├── Layout.js # Layout wrapper 
 
-### Making a Progressive Web App
+│ │ └── Header.js # Header component 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+│ ├── context/ │ 
 
-### Advanced Configuration
+│ └── SearchContext.js # Context for state management 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+│ ├── pages/ # Application pages 
 
-### Deployment
+│ │ ├── HomePage.js # Search input page 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+│ │ └── ResultPage.js # Search results page 
 
-### `npm run build` fails to minify
+│ ├── services/ │ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+│ └── searchService.js # API service for fetching results 
+
+│ ├── styles/ 
+
+│ │ ├── Home.css # Styles for HomePage 
+
+│ │ └── Result.css # Styles for ResultPage 
+
+│ ├── App.js # Root component │ 
+
+├── index.js # Entry point 
+
+│ └── utils/ # Utility functions (if any) 
+
+└── package.json # App dependencies and scripts
+
+
+
+### Prerequisites 
+
+Node.js (v16 or higher): Download and install from Node.js Official Website. 
+
+npm (comes with Node.js) or yarn for package management. 
+
+
+### Getting Started
+
+1. Clone the Repository 
+
+git clone https://github.com/shameema22/searchify-app.git 
+cd searchify-app 
+ 
+
+2. Install Dependencies 
+
+Run the following command in the project directory: 
+
+npm install 
+ 
+
+3. Start the Development Server 
+
+Start the app on your local development server: 
+
+npm start 
+ 
+
+The app will run at http://localhost:3000. 
+
+
+## Scripts 
+
+npm start: Starts the development server. 
+
+npm run build: Builds the app for production. 
+
+npm test: Runs test cases (if implemented). 
+
+npm run eject: Ejects the app configuration (not recommended unless needed). 
+
+
+### Environment Variables 
+
+Create a .env file in the project root with the following configuration: 
+
+REACT_APP_API_URL=http://localhost:56423/Searchify 
+ 
+
+This environment variable is used for making API calls to the backend. 
+
+
+### API Integration 
+
+The frontend communicates with the backend via the SearchContext and the searchService.js. 
+
+#### API Endpoint: 
+
+POST /GetSearchResults 
+
+####Sample Response: 
+
+    { 
+      "results": [ 
+        { 
+          "id": 1, 
+          "title": "Eat. Stay. Love.", 
+          "description": "An all in one experience at Fratelli Vineyards.", 
+          "imageUrl": "http://localhost:56423/Images/vineyard.jpg" 
+        }, 
+        { 
+          "id": 2, 
+          "title": "Sunset Savour", 
+          "description": "Enjoy exclusive 6 experiences at Sula Vineyards.", 
+          "imageUrl": "http://localhost:56423/Images/sunset.jpg" 
+        } 
+      ], 
+      "totalRecords": 2 
+    } 
+ 
+
+### Styling 
+
+The app uses CSS for styling and layout. 
+
+####Responsive Grid (Results Page) 
+
+A flexbox/grid layout is used to display search results in rows and columns. 
+
+Each row contains 4 items (on larger screens), which adjust to 2 items on tablets and 1 item on mobile. 
+
+
+### Future Enhancements 
+
+Pagination: Add pagination for large datasets. 
+
+Search Filters: Add filters for narrowing down results. 
+
+Error Page: Display a dedicated error page for API failures. 
+
+Unit Testing: Implement unit tests for components. 
+
+Accessibility: Improve ARIA roles and keyboard navigation. 
+
+User login and Registration with JWT 
