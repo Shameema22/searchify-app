@@ -1,0 +1,63 @@
+.result-page {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 45px;
+}
+
+.grid-item {
+  overflow: hidden;
+}
+
+.grid-image {
+  width: 100%;
+  height: 200px;
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.result-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* To make the page responsive */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid-title {
+    font-size: 16px;
+  }
+
+  .grid-description {
+    font-size: 12px;
+  }
+}

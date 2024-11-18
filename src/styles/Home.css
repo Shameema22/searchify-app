@@ -1,0 +1,44 @@
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+  }
+  
+  .search-container {
+    background-color: #22517f;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 250px; 
+    padding: 10px;
+    background-color: #22517f;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .search-bar input:focus {
+    border-color: #22517f;
+  }
+  
+  .search-bar button {
+    background-color: #22517f;
+  }
+  
+  .search-bar button i {
+    color: white; 
+    font-size: 20px;
+  }
+  
+  .search-bar i {
+    color: white; 
+    margin: 10px; 
+    font-size: 20px;
+  }
+  
